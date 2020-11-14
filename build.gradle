@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // LWJGL core
+    implementation files("src/lib/core/lwjgl.jar")
+    runtime files("src/lib/core/lwjgl-natives-linux.jar")
+    runtime files("src/lib/core/lwjgl-natives-linux-arm32.jar")
+    runtime files("src/lib/core/lwjgl-natives-linux-arm64.jar")
+    runtime files("src/lib/core/lwjgl-natives-macos.jar")
+    runtime files("src/lib/core/lwjgl-natives-windows.jar")
+    runtime files("src/lib/core/lwjgl-natives-windows-x86.jar")
+
+    // LWJGL OpenGL
+    implementation files("src/lib/opengl/lwjgl-opengl.jar")
+    runtime files("src/lib/opengl/lwjgl-opengl-natives-linux.jar")
+    runtime files("src/lib/opengl/lwjgl-opengl-natives-linux-arm32.jar")
+    runtime files("src/lib/opengl/lwjgl-opengl-natives-linux-arm64.jar")
+    runtime files("src/lib/opengl/lwjgl-opengl-natives-macos.jar")
+    runtime files("src/lib/opengl/lwjgl-opengl-natives-windows.jar")
+    runtime files("src/lib/opengl/lwjgl-opengl-natives-windows-x86.jar")
+
+    // LWJGL GLFW
+    implementation files("src/lib/glfw/lwjgl-glfw.jar")
+    runtime files("src/lib/glfw/lwjgl-glfw-natives-linux.jar")
+    runtime files("src/lib/glfw/lwjgl-glfw-natives-linux-arm32.jar")
+    runtime files("src/lib/glfw/lwjgl-glfw-natives-linux-arm64.jar")
+    runtime files("src/lib/glfw/lwjgl-glfw-natives-macos.jar")
+    runtime files("src/lib/glfw/lwjgl-glfw-natives-windows.jar")
+    runtime files("src/lib/glfw/lwjgl-glfw-natives-windows-x86.jar")
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
